@@ -1,3 +1,6 @@
+// Carlos Andre Velozo Trufini
+// Matricula: 1222130030
+
 #include "leitura.h"
 
 #define N 50
@@ -227,7 +230,7 @@ void main () {
                 printf("Digite a quantidade em estoque do produto: ");
                 p.qtd_estoque = lerInteiro();
                 nCadastrados = cadastrar(produtos,nCadastrados,p);
-                }                                                        //Vetor,posição,produto.
+                }                                                        //Vetor,posiï¿½ï¿½o,produto.
                 break;
             case 2: // Listar
                 listar(produtos,nCadastrados);
@@ -248,7 +251,7 @@ void main () {
                 }
                 system("PAUSE");
                 break;
-            case 4: //Exibir informações de um codigo de produto específico.
+            case 4: //Exibir informaï¿½ï¿½es de um codigo de produto especï¿½fico.
                 printf("Exibir informacoes de um codigo de produto especifico.\n");
                 printf("\n\nDigite o codigo do produto para exibir as informacoes: ");
                 codigo = lerInteiro();
@@ -263,7 +266,7 @@ void main () {
                 if (alterarvalor(produtos,codigo,novovalor,nCadastrados))
                     printf("Valor alterado com sucesso.\n");
                 else
-                    printf("Produto não cadastrado.\n");
+                    printf("Produto nï¿½o cadastrado.\n");
                 break;
             case 6: //Resetar informacoes.
                 printf("Resetar informacoes de um produto.\n");
@@ -274,11 +277,11 @@ void main () {
                 else
                     printf("Produto nao cadastrado!\n");
                 break;
-            case 7: //Soma dos preços
+            case 7: //Soma dos preï¿½os
                 printf("\n\nA soma dos precos de todos os produtos eh: %.2f.\n\n",somapreco(produtos,nCadastrados));
                 system("PAUSE");
                 break;
-            case 8: //Media dos preços
+            case 8: //Media dos preï¿½os
                 printf("\n\nA media dos precos dos produtos eh: %.2f.\n\n",mediapreco(produtos,nCadastrados));
                 system("PAUSE");
                 break;
@@ -290,12 +293,12 @@ void main () {
                 printf("\nO produto mais barato custa: %.2f.\n\n",produtobarato(produtos,nCadastrados));
                 system("PAUSE");
                 break;
-            case 11: //Ordem crescente código
+            case 11: //Ordem crescente cï¿½digo
                 crescentecodigo(produtos,nCadastrados);
                 printf("\n\nA ordem dos registros foram alteradas para uma ordem crescente em relacao ao numero do codigo.\n\n");
                 system("PAUSE");
                 break;
-            case 12: //Ordem crescente descrição
+            case 12: //Ordem crescente descriï¿½ï¿½o
                 crescentedescricao(produtos,nCadastrados);
                 printf("\n\nA ordem dos registros foram alteradas para uma ordem crescente em relacao ao numero de caracteres da descricao.\n\n");
                 system("PAUSE");
