@@ -88,13 +88,20 @@ float somapreco(Produto p[],int nProdutos) {
     return precos;
 }
 
+
+int contaRegistros(Produto p[],int quant) {
+    int i,cont = 0;
+    for (i = 0;i < quant;i++) {
+        if (p[i].codigo != 0)
+            cont++;
+    }
+    return cont;
+}
+
 float mediapreco(Produto p[],int nProdutos) {
-    int i;
-    float media;
-    media = 0;
-    for (i = 0;i < nProdutos; i++)
-        media = p[i].valor_unitario + media;
-    return media/nProdutos;
+    float s = somapreco(p,nProdutos);
+    int n = contaRegistros(p,nProdutos);
+    return s/n;
 }
 
 float produtocaro(Produto p[],int nProdutos) {
@@ -321,6 +328,7 @@ void main () {
                     break;
                 }
                 else
+                    printf("\nArquivo nao salvo, saindo do programa.. .\n");
                     break;
             default:;
         }
